@@ -9,10 +9,10 @@ import java.util.Set;
 
 /**
  * @Title List Interface Toolkit 
- * @com.mylib.util ListUtil.java
+ * @com.jaws.mylib.util ListUtil.java
  * @Describtion
  * @author jiangpan
- * @verson 1.0
+ * @version 1.0
  * @2016年12月28日 上午10:35:06
  */
 public final class ListUtil {
@@ -24,7 +24,7 @@ public final class ListUtil {
 	 * @param index int 指定元素在数组中的索引
 	 * @return
 	 */
-	public <T> List<T> listArrayToList(ArrayList<T[]> listArray,
+	public static <T> List<T> listArrayToList(ArrayList<T[]> listArray,
 			int index) {
 		ArrayList<T> rtnList = new ArrayList<T>();
 		if (listArray == null) {
@@ -48,7 +48,7 @@ public final class ListUtil {
 	 * @param valueIndex Value在数组中的索引
 	 * @return
 	 */
-	public <T> Map<T, T> listArrayToMap(ArrayList<T[]> listArray,
+	public static <T> Map<T, T> listArrayToMap(ArrayList<T[]> listArray,
 			int keyIndex, int valueIndex) {
 		Map<T, T> rtnMap = new HashMap<T, T>();
 		if (listArray == null) {
@@ -72,7 +72,7 @@ public final class ListUtil {
 	 * @param list List<T>ֵ
 	 * @return
 	 */
-	public <T> List<T> removeDuplicate(List<T> list){
+	public static <T> List<T> removeDuplicate(List<T> list){
 		if (list == null) {
 			return null;
 		}
@@ -89,7 +89,7 @@ public final class ListUtil {
 	 * 去掉List中的重复元素
 	 * @param list List<T> 
 	 */
-	public <T> void unDuplicate(List<T> list){
+	public static <T> void unDuplicate(List<T> list){
 		if (list == null) {
 			throw new NullPointerException();
 		}
