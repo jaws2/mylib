@@ -42,7 +42,8 @@ public class SQLUtil {
 	
 	/**
 	 * 数据列表转换为sql中的in子句所用条件
-	 * @param datas
+	 * @param datas  ArrayList<T>
+	 * @return 返回 元素为'T1.toString()','T2.toString()','T3.toString()'这样格式的SQL语句
 	 * @return
 	 */
 	public <T> String convertDataToSql(ArrayList<T> datas) {

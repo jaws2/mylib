@@ -17,7 +17,7 @@ public final class MapUtil {
 	private MapUtil(){};
 	/**
 	 * 打印简单结构的Map
-	 * @param map Map<K, V>
+	 * @param map Map<K, V> K,V类型都需要重写toString方法
 	 */
 	public static <K,V> void printMap(final Map<K, V> map){
 		if(map==null || map.isEmpty()){

@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.apache.log4j.Logger;
+
 /**
  * @Title List Interface Toolkit 
  * @com.jaws.mylib.util ListUtil.java
@@ -17,7 +19,24 @@ import java.util.Set;
  */
 public final class ListUtil {
 	
+	private static final Logger log = Logger.getLogger(ListUtil.class);
 	private ListUtil(){};
+	
+	/**
+	 * 打印列表里面元素
+	 * 
+	 * @param list 元素需要重写toString方法
+	 * void
+	 */
+	public static <T> void printSimpleList(List<T> list){
+		if (list == null || list.size() == 0 ) {
+			return;
+		}
+		for (T t : list) {
+			log.debug(t.toString());
+		}
+	}
+	
 	/**
 	 * 数组列表转换为单个元素的列表
 	 * @param listArray ArrayList<T[]> 数组列表
